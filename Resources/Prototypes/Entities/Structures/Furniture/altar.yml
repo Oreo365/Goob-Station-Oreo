@@ -427,3 +427,30 @@
     rodProto: HonkmotherMaw # Shitchap
     effectProto: EffectSpark
     soundPath: /Audio/Items/bikehorn.ogg
+
+- type: entity
+  id: AltarMagic
+  parent: AltarNanotrasen
+  name: arcane altar
+  description: A arcane altar radiating magical energy.
+  components:
+  - type: Sprite
+    sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
+    layers:
+    - state: magic
+    - state: magic_tome
+      shader: unshaded
+  - type: Icon
+    sprite: Structures/Furniture/Altars/Gods/magic.rsi
+    state: magic
+  - type: PointLight
+    radius: 1.5
+    energy: 1
+    color: "#e0ffff"
+  - type: Construction
+    graph: AltarsGraph
+    node: TechnologyAltarNode
+  - type: AltarSource
+    rodProto: GodHand
+    effectProto: EffectSpark
+    soundPath: /Audio/Effects/hallelujah.ogg
